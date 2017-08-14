@@ -761,3 +761,87 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
   Rendered posts/edit.html.erb within layouts/application (16.0ms)
 Completed 200 OK in 347ms (Views: 318.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 182.186.157.145 at 2017-08-14 13:33:52 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 76ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1/edit" for 182.186.157.145 at 2017-08-14 13:33:56 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 1429ms (Views: 1411.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/1/edit" for 182.186.157.145 at 2017-08-14 13:43:26 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 21.6ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/posts/1" for 182.186.157.145 at 2017-08-14 13:43:35 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w5IU/as72ZTQWNMOHkLY3o9xUHXRBypY+vStvncGQd8V8CCwCp7ViDWzN3OySNH0+GTNWgQxOtDkhMIqY3PqqA==", "post"=>{"title"=>"Rails Introduction Quiz changed", "description"=>"asdfasdf"}, "commit"=>"Update Post", "id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `update' for nil:NilClass):
+  app/controllers/posts_controller.rb:27:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.5ms)
+
+
+Started PATCH "/posts/1" for 182.186.157.145 at 2017-08-14 13:43:55 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w5IU/as72ZTQWNMOHkLY3o9xUHXRBypY+vStvncGQd8V8CCwCp7ViDWzN3OySNH0+GTNWgQxOtDkhMIqY3PqqA==", "post"=>{"title"=>"Rails Introduction Quiz changed", "description"=>"asdfasdf"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Rails Introduction Quiz changed"], ["updated_at", "2017-08-14 13:43:55.793259"], ["id", 1]]
+  [1m[36m (17.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://46.101.236.30:30004/posts/1
+Completed 302 Found in 83ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/posts/1" for 182.186.157.145 at 2017-08-14 13:43:56 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/1" for 182.186.157.145 at 2017-08-14 13:44:05 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w5IU/as72ZTQWNMOHkLY3o9xUHXRBypY+vStvncGQd8V8CCwCp7ViDWzN3OySNH0+GTNWgQxOtDkhMIqY3PqqA==", "post"=>{"title"=>"Rails Introduction Quiz changed", "description"=>""}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", ""], ["updated_at", "2017-08-14 13:44:05.851483"], ["id", 1]]
+  [1m[35m (35.7ms)[0m  commit transaction
+Redirected to http://46.101.236.30:30004/posts/1
+Completed 302 Found in 40ms (ActiveRecord: 36.2ms)
+
+
+Started GET "/posts/1" for 182.186.157.145 at 2017-08-14 13:44:06 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
