@@ -52,7 +52,7 @@ Let's take the `edit` form that utilized the `form_tag` that we built before for
 
   <label>Post description</label><br>
   <%= text_area_tag :description, @post.description %><br>
-  
+
   <%= submit_tag "Submit Post" %>
 <% end %>
 ```
@@ -90,7 +90,7 @@ Our new form will look something like this:
 
   <label>Post description</label><br>
   <%= f.text_area :description %><br>
-  
+
   <%= f.submit %>
 <% end %>
 ```
@@ -145,3 +145,5 @@ If you go back to the `edit` page and submit the form, the record will be update
 Nice work! You now know how to integrate multiple form helpers into a Rails application, and you should have a good idea on when to properly use `form_for` vs. `form_tag`.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-form_for-on-edit-readme'>form_for on Edit</a> on Learn.co and start learning to code for free.</p>
+
+<!-- testing -->
